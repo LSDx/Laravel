@@ -5,24 +5,23 @@ use Illuminate\Database\Migrations\Migration;
 
 class CrateUsersTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
+
 	public function up()
 	{
-		//
+		Schema::create('users', function(Blueprint $t) 
+		{
+			$t->increments('id');
+			$t->string('email');
+			$t->string('password');
+			$t->string('remember_token');
+			$t->timestamps();
+		});
 	}
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
+
 	public function down()
 	{
-		//
+		Schema::drop('users');
 	}
 
 }
