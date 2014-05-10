@@ -8,13 +8,13 @@ class CrateUsersTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('users', function(Blueprint $t) 
+		Schema::create('users', function(Blueprint $table) 
 		{
-			$t->increments('id');
-			$t->string('email');
-			$t->string('password');
-			$t->string('remember_token');
-			$t->timestamps();
+			$table->increments('id');
+			$table->string('email');
+			$table->string('password');
+			$table->string('remember_token');
+			$table->timestamps();
 		});
 	}
 

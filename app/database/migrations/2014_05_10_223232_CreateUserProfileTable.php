@@ -7,14 +7,15 @@ class CreateUserProfileTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('user_profiles', function(Blueprint $t) 
+		Schema::create('user_profiles', function(Blueprint $table) 
 		{
-			$t->increments('id');
-			$t->foreign('user_id')->references('id')->on('users');
-			$t->string('first_name');
-			$t->string('last_name');
-			$t->string('nickname');
-			$t->timestamps();
+			$table->increments('id');
+			$table->foreign('user_id')->references('id')->on('users')
+			  ->onUpdate('cascade')->onDelete('cascade');
+			$table->string('first_name');
+			$table->string('last_name');
+			$table->string('nickname');
+			$table->timestamps();
 		});
 	}
 
