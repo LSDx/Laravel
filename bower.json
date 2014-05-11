@@ -1,0 +1,20 @@
+{
+  "name": "Laravel Application",
+  "version": "1.0",
+  "homepage": "https://github.com/LSDx/Laravel",
+  "authors": [
+    "Viktors <viktors.lsdx@gmail.com>"
+  ],
+  "description": "Simple user auth system",
+  "main": "public/assets/css/general.css",
+  "keywords": [
+    "Bootstrap",
+    "jQuery",
+    "Font-awesome"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.1.1",
+    "fontawesome": "~4.0.3"
+  }
+}
