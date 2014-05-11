@@ -1,0 +1,21 @@
+body {
+	background: #333;
+	padding-top: 70px;
+	padding-bottom: 15px;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
+
+/* Login */
+
+.panel-login .input-group, 
+.panel-login button {
+	margin-bottom: 10px;
+}
+
+.panel-login form {
+	margin-bottom: 0
+}
