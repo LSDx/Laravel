@@ -1,15 +1,23 @@
 <?php
 
-class AuthController extends \BaseController {
+class AuthController extends BaseController {
 
-	// Display login page
+	/**
+	 * Display login page.
+	 *
+	 * @return Response
+	 */
 
 	public function index()
 	{
 		return View::make('auth.login');
 	}
 
-	// Try to login user
+	/**
+	 * Login user, if data's correct, otherwise redirect back with error,
+	 *
+	 * @return Response
+	 */
 
 	public function store()
 	{
@@ -20,6 +28,18 @@ class AuthController extends \BaseController {
 
 		return Redirect::back()->withInput()->withError('E-Mail or/and password is incorrect.');
 
+	}
+
+	/**
+	 * Logout user.
+	 *
+	 * @return Response
+	 */
+
+	public function destroy() 
+	{
+		Auth::logout();
+		return Redirect::to('/');
 	}
 
 

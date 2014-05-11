@@ -17,10 +17,6 @@ Route::group(['before' => 'auth'], function()
 
 	// Logout
 
-	Route::get('logout', function() 
-	{
-		Auth::logout(); 
-		return Redirect::to('login');
-	});
+	Route::get('logout', ['as' => 'logout', 'uses' => 'AuthController@destroy']);
 
 });
