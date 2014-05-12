@@ -25,11 +25,6 @@ class UsersTableSeeder extends Seeder {
 
 		$faker = Faker\Factory::create('en_US'); // Create new Faker instance
 
-		// Add faker providers
-
-		$faker->addProvider( new Faker\Provider\Internet($faker) );
-    	$faker->addProvider( new Faker\Provider\en_US\Person($faker) );
-
 		for($i = 1; $i <= $count; $i++)
 		{
 
