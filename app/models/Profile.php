@@ -8,8 +8,8 @@ class Profile extends Eloquent {
 	protected $table = 'profiles';
 
 	/**
-	 * Each profile has one user, so we need relationship between them.
-	 *
+	 * One to One
+	 * One Profile has One User
 	 * @return void
 	 */
 
