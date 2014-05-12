@@ -16,4 +16,23 @@ class BaseController extends Controller {
 		}
 	}
 
+	/**
+	 * Constructor
+	 *
+	 * @return void
+	 */
+
+	public function __construct() 
+	{
+		// Share user to all views, if user is logged in
+		
+		if( Auth::check() ) 
+		{ 
+			$user = Auth::user();
+			View::share('authUser', $user);
+		}
+
+	}
+	
+
 }

@@ -2,12 +2,15 @@
 
 class HomeController extends BaseController {
 
+	/**
+	 * Display home page
+	 *
+	 * @return view
+	 */
 
 	public function index()
 	{
-		$user = Auth::user();
-
-		return View::make('home', compact('user'));
+		return View::make('home');
 	}
 
 }

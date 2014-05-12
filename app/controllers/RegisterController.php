@@ -32,7 +32,9 @@ class RegisterController extends BaseController {
 			'nickname' => 'required|between:3,25|unique:profiles|alpha_num'
 		];
 
-		$valid = Validator::make(Input::all(), $rules);
+		$input = Input::all();
+
+		$valid = Validator::make($input, $rules);
 
 		if( $valid->fails() ) return Redirect::back()->withInput()->withErrors($valid);
 
@@ -59,7 +61,9 @@ class RegisterController extends BaseController {
 
 		// Login user and redirect to homepage
 
-		Auth::attempt(Input::only('email', 'password'));
+		$authData = Input::only('email', 'password');
+
+		Auth::attempt($authData);
 
 		return Redirect::to('/');
 

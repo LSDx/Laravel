@@ -40,7 +40,7 @@
 
 			<ul class="nav navbar-nav navbar-right">
 
-				<span class="navbar-text">Hello, {{ $user->profile->nickname }}</span>
+				<span class="navbar-text">Hello, {{ $authUser->profile->nickname }}</span>
 
 				<li><a href="{{ URL::route('logout') }}"><i class="fa fa-logout"></i> Logout</a></li>
 

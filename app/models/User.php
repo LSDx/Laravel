@@ -82,7 +82,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
-
+	/**
+	 * Each user has one profile, so this can be done with relationship.
+	 *
+	 * @return void
+	 */
 	public function profile() 
 	{
 		return $this->hasOne('Profile');

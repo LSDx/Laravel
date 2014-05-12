@@ -6,7 +6,7 @@
 
 	<div class="col-centered col-lg-4 well panel-login">
 		
-		Hello, {{ $user->profile->nickname }}
+		Hello, {{ $authUser->profile->nickname }}
 
 	</div>
 
